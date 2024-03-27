@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card-head">
+    <p class="title-card">Listas de Alumnos</p>
+    <p class="mb-0 color-span"> Última actualización: <span>{{ fecha | date: 'dd/MM/yyyy hh:mm' }}</span> </p>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let estudiante of Estudiantes">
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card-container" [class]="setTagColor(estudiante.status)">
+          <div class="card-container-img">
+            <img [src]="setIcon(estudiante.faculty)" width="24px" height="24px">
+          </div>
+          <div>
+            <p>
+              <strong>Nombre: </strong> {{estudiante.name}}
+            </p>
+            <p>
+              <strong>Apellido: </strong> {{estudiante.lastName}}
+            </p>
+            <p>
+              <strong>Facultad: </strong> {{estudiante.faculty}}
+            </p>
+            <p>
+              <strong>Estado: </strong>
+              <span class="card-tag" [class]="setTagColor(estudiante.status)">{{estudiante.status}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

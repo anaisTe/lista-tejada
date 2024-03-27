@@ -1,0 +1,50 @@
+.title-card {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.card-container {
+    display: flex;
+    border: 1px solid;
+    padding: 24px;
+    border-radius: 10px;
+    gap: 35px;
+
+    &-img {
+        border: 1px solid;
+        height: fit-content;
+        border-radius: 50%;
+        padding: 18px;
+    }
+
+    .card-tag {
+        border: 1px solid;
+        padding: 2px 10px;
+        border-radius: 4px;
+    }
+}
+
+.color-red {
+    color: #C34A36;
+    background: #fff7f5;
+}
+
+.color-green {
+    color: #008B74;
+    background: #f0fffc;
+}
+
+.color-blue {
+    color: #009EFA;
+    background: #f5fbff;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .color-span {
+        color: gray;
+    }
+}
